@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "livechart1"
+version = "0.1.0"
+description = ""
+authors = ["Adnantium <adnantium@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.4"
+langchain = "^0.1.16"
+langchain-community = "^0.0.33"
+langchain-openai = "^0.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
