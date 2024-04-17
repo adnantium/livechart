@@ -1,0 +1,18 @@
+
+
+--- Patient Name: {{patient.name}} admitted {{patient.admission_datetime}} --- 
+
+--- Care Plan: ---
+{% if patient.care_plan %}
+{{patient.care_plan}}
+{% else %}
+No care plan yet
+{% endif %}
+-----------------------------------------------------------------------
+Notes:
+{% for note in notes %}
+From {{note.note_type}}: {{note.creator.name}} at {{note.datetime}}
+"""
+{{note.text}}
+"""
+{% endfor %}

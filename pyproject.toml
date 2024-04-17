@@ -11,7 +11,12 @@ django = "^5.0.4"
 langchain = "^0.1.16"
 langchain-community = "^0.0.33"
 langchain-openai = "^0.1.3"
+langchain-cli = "^0.0.21"
+python-multipart = "^0.0.9"
 
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.23.0"
 
 [build-system]
 requires = ["poetry-core"]

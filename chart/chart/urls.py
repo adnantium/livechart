@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from icu.views import patient_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('patient_data/<int:patient_id>/', patient_data)
 ]
