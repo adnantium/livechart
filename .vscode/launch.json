@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debugger: Agent",
+      "name": "Debug: Agent",
       "type": "debugpy",
       "request": "launch",
       "program": "livechartai/agent.py",
@@ -13,7 +13,7 @@
       "cwd": "${workspaceFolder}/chart/"
     },
     {
-      "name": "Debugger: Django",
+      "name": "Debug: Django",
       "type": "debugpy",
       "request": "launch",
       "args": ["runserver"],
@@ -23,7 +23,7 @@
     },
 
     {
-      "name": "Debugger: patient_care",
+      "name": "Debug: patient_care",
       "type": "debugpy",
       "request": "launch",
       "program": "livechartai/patient_care.py",

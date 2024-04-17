@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "livechart1"
+name = "LiveChart"
 version = "0.1.0"
 description = ""
 authors = ["Adnantium <adnantium@gmail.com>"]
