@@ -1,0 +1,158 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$h4nN7U6ImyY6597e9SMkS1$xdpXwjVIKaX2uXYHwooTqI4VbqLhgSiRxcGseLd3mdo=",
+            "last_login": "2024-04-16T18:22:06.997Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "admin@example.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-04-16T18:21:48.212Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "icu.caretaker",
+        "pk": 1,
+        "fields": {
+            "name": "Dr. Banner",
+            "role": "doctor"
+        }
+    },
+    {
+        "model": "icu.caretaker",
+        "pk": 2,
+        "fields": {
+            "name": "Dr. Strange",
+            "role": "doctor"
+        }
+    },
+    {
+        "model": "icu.caretaker",
+        "pk": 3,
+        "fields": {
+            "name": "Peter Resident",
+            "role": "resident"
+        }
+    },
+    {
+        "model": "icu.caretaker",
+        "pk": 4,
+        "fields": {
+            "name": "Bruce Resident",
+            "role": "resident"
+        }
+    },
+    {
+        "model": "icu.caretaker",
+        "pk": 5,
+        "fields": {
+            "name": "LiveChart",
+            "role": "livechart"
+        }
+    },
+    {
+        "model": "icu.caretaker",
+        "pk": 6,
+        "fields": {
+            "name": "Dr. Cardio",
+            "role": "cardiology"
+        }
+    },
+    {
+        "model": "icu.patient",
+        "pk": 1,
+        "fields": {
+            "name": "Norman Osborn",
+            "admission_datetime": "2024-04-16T18:24:12Z",
+            "care_plan": "1. **Vital Signs Monitoring:** Continue to monitor vital signs every 2 hours due to the recent spike in blood pressure. Pay close attention to blood pressure, heart rate, respiratory rate, and oxygen saturation. Report any significant changes immediately.\r\n\r\n2. **Blood Pressure Management:** The patient's blood pressure is significantly elevated. Start him on amlodipine 5 mg orally once daily and titrate as needed. Monitor his blood pressure closely after starting this medication.\r\n\r\n3. **Fluid Balance:** Continue to monitor fluid balance closely. Record input and output every hour. Aim for a negative fluid balance to help reduce fluid overload.\r\n\r\n4. **Lab Tests:** \r\n   - Repeat a complete blood count (CBC) to check for anemia or infection.\r\n   - Repeat a basic metabolic panel (BMP) to assess kidney function and electrolyte levels.\r\n   - Repeat a B-type natriuretic peptide (BNP) test to assess the severity of heart failure.\r\n   - Repeat a liver function test (LFT) to assess liver function as liver congestion can occur in heart failure.\r\n   - Repeat a coagulation profile to assess clotting status.\r\n\r\n5. **Echocardiogram:** If not already done, schedule an echocardiogram to assess cardiac function and structure.\r\n\r\n6. **Medications:** \r\n   - Continue current heart failure medications. \r\n   - Increase Furosemide to 606 mg IV twice daily to reduce fluid overload.\r\n   - Continue Spironolactone 25 mg orally once daily.\r\n   - Continue Carvedilol 3.125 mg orally twice daily, titrate dose as tolerated to target dose of 25 mg twice daily.\r\n   - Continue Lisinopril 25 mg orally once daily, titrate dose as tolerated to target dose of 20 mg once daily.\r\n\r\n7. **Oxygen Therapy:** Continue to administer supplemental oxygen to maintain oxygen saturation >94%.\r\n\r\n8. **Physical Therapy:** Continue physical therapy for safe mobilization and leg elevation to help reduce peripheral edema.\r\n\r\n9. **Dietary Consult:** Continue with the low sodium diet to help control fluid balance.\r\n\r\n10. **Cardiology Consult:** Follow up with cardiology for further management of chronic heart failure.\r\n\r\n11. **Patient Education:** Continue to educate the patient about the importance of medication compliance, fluid restriction, and regular follow-up appointments.\r\n\r\n12. **Daily Assessment:** Assess the patient's response to treatment daily. Adjust the care plan as necessary based on the patient's condition.\r\n\r\n13. **Discharge Planning:** Continue planning for discharge and home care needs, including home health nursing and physical therapy if necessary."
+        }
+    },
+    {
+        "model": "icu.patient",
+        "pk": 2,
+        "fields": {
+            "name": "J. Jonah Jameson",
+            "admission_datetime": "2024-04-16T18:24:17Z",
+            "care_plan": "TBD"
+        }
+    },
+    {
+        "model": "icu.note",
+        "pk": 1,
+        "fields": {
+            "patient": 1,
+            "creator": 1,
+            "note_type": "doctor",
+            "datetime": "2024-04-16T18:26:19.812Z",
+            "text": "Mr. Smith, a 65-year-old male patient with a history of chronic heart failure, presents to the cardiology clinic with worsening dyspnea, fatigue, and peripheral edema. On examination, he exhibits signs of fluid overload, including elevated jugular venous pressure and bilateral lower extremity edema. Vital signs reveal a blood pressure of 100/70 mmHg, heart rate of 90 beats per minute, respiratory rate of 20 breaths per minute, and oxygen saturation of 94% on room air.",
+            "is_enabled": false
+        }
+    },
+    {
+        "model": "icu.note",
+        "pk": 2,
+        "fields": {
+            "patient": 1,
+            "creator": 3,
+            "note_type": "resident",
+            "datetime": "2024-04-16T18:26:34.142Z",
+            "text": "Cardiology consulted. Waiting for response.",
+            "is_enabled": false
+        }
+    },
+    {
+        "model": "icu.note",
+        "pk": 3,
+        "fields": {
+            "patient": 1,
+            "creator": 4,
+            "note_type": "lab_result",
+            "datetime": "2024-04-17T17:43:34.541Z",
+            "text": "BP: 190/130 mmHg",
+            "is_enabled": false
+        }
+    },
+    {
+        "model": "icu.note",
+        "pk": 4,
+        "fields": {
+            "patient": 1,
+            "creator": 6,
+            "note_type": "consult",
+            "datetime": "2024-04-18T13:25:07.237Z",
+            "text": "Cardiology Consultant Findings:\r\n* Bradycardia noted on examination, ECG confirms complete heart block.\r\n\r\nRecommendations:\r\n* Urgent referral for pacemaker implantation. Schedule post-procedure follow-up in one week.",
+            "is_enabled": false
+        }
+    },
+    {
+        "model": "icu.note",
+        "pk": 5,
+        "fields": {
+            "patient": 1,
+            "creator": 5,
+            "note_type": "lab_result",
+            "datetime": "2024-04-18T14:05:06.708Z",
+            "text": "Liver Function Test results:\r\n\r\n* ALT: 44 IU/L\r\n* ALP: 163 IU/L\r\n* AST: 1600 U/L",
+            "is_enabled": false
+        }
+    },
+    {
+        "model": "icu.note",
+        "pk": 6,
+        "fields": {
+            "patient": 1,
+            "creator": 4,
+            "note_type": "resident",
+            "datetime": "2024-04-18T15:07:31.145Z",
+            "text": "Gave him 404 mg of Furosemide",
+            "is_enabled": false
+        }
+    }
+]

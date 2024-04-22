@@ -33,23 +33,15 @@ add_routes(
     get_observe_chain(),
     path="/observe",
 )
-# add_routes(
-#     app,
-#     get_ask_chain(),
-#     path="/ask",
-# )
-
-
-# @app.get("/care_plan")
-# async def get_notes():
-#     patient_data = get_patient_data(app.patient_id)
-#     return {'patient_data': patient_data}
 
 
 @app.post("/ask", response_class=PlainTextResponse)
-async def ask_question(request: Request,
-                           question: str = Form(...)):
-    answer = get_ask_chain(question).invoke({'question': question,})
+async def ask_question(request: Request, question: str = Form(...)):
+    answer = get_ask_chain(question).invoke(
+        {
+            "question": question,
+        }
+    )
     return answer
 
 
